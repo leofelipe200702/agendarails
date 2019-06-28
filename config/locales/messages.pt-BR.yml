@@ -1,0 +1,8 @@
+"pt-BR":
+  messages:
+    confirm:  Tem Certeza?
+    listing: Listando
+    erros: Falha ao salvar
+    created: Registro criado com sucesso!
+    updated: Registro atualizado com sucesso!
+    destroyed: Registro apagado com sucesso!

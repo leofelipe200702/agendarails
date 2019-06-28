@@ -1,0 +1,34 @@
+<div class="dark-matter">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%=Contact.human_attribute_name("name")%>:</strong>
+  <%= @contact.name %>
+</p>
+
+<p>
+  <strong><%=Contact.human_attribute_name("email")%>:</strong>
+  <%= @contact.email %>
+</p>
+
+<p>
+  <strong><%=Contact.human_attribute_name("kind")%>:</strong>
+  <%= @contact.kind.description %>
+</p>
+
+<% @contact.phones.each do |contact_phone| %>
+  <p>
+    <strong><%=Phone.human_attribute_name("phone")%>:</strong>
+      <%= contact_phone.phone %><br/>
+  </p>
+       
+        
+<% end %>
+<p>
+  <strong><%=Contact.human_attribute_name("rmk")%>:</strong>
+  <%= @contact.rmk %>
+</p>
+
+<%= link_to t('buttons.edit'), edit_contact_path(@contact) %> |
+<%= link_to t('buttons.back'), contacts_path %>
+</div>
